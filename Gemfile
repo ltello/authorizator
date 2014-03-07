@@ -27,8 +27,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# User manager
+gem 'devise', '3.2.3'
+
 # Oauth provider
-gem 'doorkeeper'
+gem 'doorkeeper', '1.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
