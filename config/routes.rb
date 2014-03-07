@@ -4,7 +4,9 @@ Authorizator::Application.routes.draw do
     get "login",  to: "devise/sessions#new"
     get "logout", to: "devise/sessions#destroy"
   end
-  use_doorkeeper
+  use_doorkeeper do
+    skip_controllers :token_info
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
