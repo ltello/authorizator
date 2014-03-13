@@ -1,3 +1,6 @@
+# make DoorKeeper revoke previous access_tokens when authorize a new one with 'client_credentials' strategy
+require "#{Rails.root}/lib/doorkeeper/oauth/client_credentials_request/creator.rb"
+
 Doorkeeper.configure do
   # Change the ORM that doorkeeper will use.
   # Currently supported options are :active_record, :mongoid2, :mongoid3, :mongo_mapper
@@ -21,7 +24,7 @@ Doorkeeper.configure do
   end
 
   # Authorization Code expiration time (default 10 minutes).
-  authorization_code_expires_in 10.minutes
+  # authorization_code_expires_in 10.minutes
 
   # Access token expiration time (default 2 hours).
   # If you want to disable expiration, set this to nil.
@@ -48,7 +51,7 @@ Doorkeeper.configure do
   # falls back to the `:client_id` and `:client_secret` params from the `params` object.
   # Check out the wiki for more information on customization
   # client_credentials :from_basic, :from_params
-  client_credentials :from_params
+  # client_credentials :from_params
 
   # Change the way access token is authenticated from the request object.
   # By default it retrieves first from the `HTTP_AUTHORIZATION` header, then
@@ -74,5 +77,5 @@ Doorkeeper.configure do
   end
 
   # WWW-Authenticate Realm (default "Doorkeeper").
-  # realm "Doorkeeper"
+  realm "ideas4all"
 end
