@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
   doorkeeper_for :all, :scopes => [:myself]
 
 
-  # GET /talking_token.json
+  # GET /services/talking_token.json
   # Returns the talking token: the one that every service has to present to be able to talk to any other one.
   def talking_token
     talking_token = persisted_valid_talking_token || create_talking_token

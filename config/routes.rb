@@ -4,6 +4,7 @@ Authorizator::Application.routes.draw do
     get "login",  to: "devise/sessions#new"
     get "logout", to: "devise/sessions#destroy"
   end
+
   use_doorkeeper do
     skip_controllers :token_info
   end
@@ -15,7 +16,7 @@ Authorizator::Application.routes.draw do
   # root 'welcome#index'
   root 'doorkeeper/applications#index'
 
-  resources :users, :except => [:create]
+  resources :users, :except => [:new, :create]
 
   resources :services, :only => [] do
     get 'talking_token', :on => :collection
