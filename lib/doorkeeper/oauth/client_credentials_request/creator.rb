@@ -5,7 +5,8 @@ module Doorkeeper
       class Creator
 
         # Persist a fresh new access token for client, scopes and attributes.
-        # Also destroy similar (same client and scopes) expired ones.
+        # Also destroy similar (same client and scopes) expired ones: not enough to only revoking them
+        #   for the mechanism to work properly with multiple services.
         def call(client, scopes, attributes = {})
           delete_expired_access_tokens_of!(client, scopes)
           # revoke_kept_access_tokens_of!(client, scopes)

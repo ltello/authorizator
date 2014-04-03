@@ -1,4 +1,4 @@
-# make DoorKeeper revoke previous access_tokens when authorize a new one with 'client_credentials' strategy
+# make DoorKeeper destroy previous access_tokens when authorize a new one with 'client_credentials' strategy
 require "#{Rails.root}/lib/doorkeeper/oauth/client_credentials_request/creator.rb"
 
 Doorkeeper.configure do
