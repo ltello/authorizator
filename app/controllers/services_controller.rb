@@ -12,6 +12,16 @@ class ServicesController < ApplicationController
     self.status        = response.status
   end
 
+  # GET /services.json
+  # Returns the list of services (services suite data) this Authorizator service provides security for.
+  def index
+    services = Doorkeeper::Application.all
+    response = Authorizator::ServicesResponse.new(services)
+    self.headers.merge!(response.headers)
+    self.response_body = response.body.to_json
+    self.status        = response.status
+  end
+
 
   private
 

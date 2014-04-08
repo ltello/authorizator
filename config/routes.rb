@@ -18,7 +18,7 @@ Authorizator::Application.routes.draw do
 
   resources :users, :except => [:new, :create]
 
-  resources :services, :only => [] do
+  resources :services, :only => [:index] do
     get 'talking_token', :on => :collection
   end
   # Example of regular route:
