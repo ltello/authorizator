@@ -34,6 +34,10 @@ gem 'devise', '3.2.3'
 # Oauth provider
 gem 'doorkeeper', '1.0.0'
 
+#capistrano
+gem 'capistrano'
+gem 'rvm-capistrano'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
