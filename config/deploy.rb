@@ -2,7 +2,7 @@
 require 'rvm/capistrano'
 
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.1.0'
 
 set :application, 'authorizator'
 set :repo_url, 'git@git.ideas4all.com:authorizator.git'
