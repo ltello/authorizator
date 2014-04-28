@@ -21,7 +21,7 @@ fetch(:default_env).merge!(rails_env: :production)
 
 set :rvm_ruby_version, 'ruby-2.1.0'
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }
-SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
+#SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
 
 # Extended Server Syntax
 # ======================
