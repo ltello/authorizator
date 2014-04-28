@@ -4,6 +4,9 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
+#capistrano
+require 'rvm/capistrano'
+
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/home/ubuntu/authorizator"
 
@@ -11,17 +14,10 @@ role :app, "majinboo.ideas4all.com"
 role :web, "majinboo.ideas4all.com"
 role :db,  "majinboo.ideas4all.com"
 
-set :bundle_gemfile, -> { release_path.join('Gemfile') }
-set :bundle_dir, -> { shared_path.join('bundle') }
-set :bundle_flags, '--deployment --quiet'
-set :bundle_without, %w{development test}.join(' ')
-set :bundle_binstubs, -> { shared_path.join('bin') }
-set :bundle_roles, :all
-fetch(:default_env).merge!(rails_env: :production)
+set :rvm_type, :system
+set :rvm_ruby_version, 'ruby-2.1.0@authorizator'
+set :rvm_custom_path, '/home/ubuntu/.rvm/gems/ruby-2.1.0@authorizator/'
 
-set :rvm_ruby_version, 'ruby-2.1.0'
-set :default_env, { rvm_bin_path: '~/.rvm/bin' }
-#SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
 
 # Extended Server Syntax
 # ======================
