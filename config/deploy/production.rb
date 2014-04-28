@@ -27,8 +27,6 @@ set :rvm_custom_path, '/home/ubuntu/.rvm/gems/ruby-2.1.0@authorizator/'
 
 server 'majinboo.ideas4all.com', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
 
-# Bundler tasks
-require 'bundler/capistrano'
 
 # Custom SSH Options
 # ==================
