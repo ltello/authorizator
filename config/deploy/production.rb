@@ -14,7 +14,7 @@ role :app, "majinboo.ideas4all.com"
 role :web, "majinboo.ideas4all.com"
 role :db,  "majinboo.ideas4all.com"
 
-set :rvm_ruby_string, :local
+set :rvm_ruby_version, '2.1.0@authorizator'
 
 # Extended Server Syntax
 # ======================
