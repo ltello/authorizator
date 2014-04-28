@@ -36,8 +36,9 @@ gem 'doorkeeper', '1.0.0'
 
 #capistrano
 gem 'capistrano', '3.1.0'
-gem 'rvm-capistrano', '1.5.0'
-gem 'capistrano-bundler', '1.1.2'
+gem 'capistrano-rvm'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
