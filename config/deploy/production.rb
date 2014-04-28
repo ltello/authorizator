@@ -14,6 +14,7 @@ role :app, "majinboo.ideas4all.com"
 role :web, "majinboo.ideas4all.com"
 role :db,  "majinboo.ideas4all.com"
 
+set :rvm_type, :system
 set :rvm_ruby_version, 'ruby-2.1.0@authorizator'
 set :rvm_custom_path, '/home/ubuntu/.rvm/gems/ruby-2.1.0@authorizator/'
 
