@@ -5,7 +5,9 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 
 #capistrano
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
+require "bundler/capistrano"
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/home/ubuntu/authorizator"
@@ -14,10 +16,8 @@ role :app, "majinboo.ideas4all.com"
 role :web, "majinboo.ideas4all.com"
 role :db,  "majinboo.ideas4all.com"
 
-set :rvm_type, :system
-set :rvm_ruby_version, 'ruby-2.1.0@authorizator'
-set :rvm_custom_path, '/home/ubuntu/.rvm/gems/ruby-2.1.0@authorizator/'
-
+set :rvm_ruby_string, 'ruby-2.1.0@authorizator'
+set :rvm_bin_path, "/usr/local/rvm/bin"
 
 # Extended Server Syntax
 # ======================
@@ -26,6 +26,16 @@ set :rvm_custom_path, '/home/ubuntu/.rvm/gems/ruby-2.1.0@authorizator/'
 # used to set extended properties on the server.
 
 server 'majinboo.ideas4all.com', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
+
+
+namespace :rvm do
+  desc "Create correct RVM file"
+  task :create_rvmrc do
+    run "cd /home/ubuntu/authorizator && rvm use 2.1.0@authorizator --rvmrc --create"
+  end
+end
+
+after "rvm:create_rvmrc"
 
 
 # Custom SSH Options
