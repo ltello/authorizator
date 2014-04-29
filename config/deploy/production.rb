@@ -5,7 +5,6 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 
 #capistrano
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
 require "bundler/capistrano"
 
