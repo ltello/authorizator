@@ -6,7 +6,6 @@
 
 #capistrano
 require 'rvm/capistrano'
-require "bundler/capistrano"
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/home/ubuntu/authorizator"
