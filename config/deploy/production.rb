@@ -33,7 +33,7 @@ namespace :rvm do
   end
 end
 
-after "rvm:create_rvmrc", :create_rvmrc
+after :create_rvmrc, "rvm:create_rvmrc"
 
 
 # Custom SSH Options
