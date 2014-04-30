@@ -1,0 +1,23 @@
+base: &base
+  adapter: mysql2
+  username: admin
+  password: 108k24gi4pfiesnr
+  host: cip-109-107-37-112.gb1.brightbox.com
+  encoding: utf8
+
+#this is for replication. In development/integration we can just set the same config as in the "development" section
+master_database:
+  database: ideas4all_authorizator
+  <<: *base
+
+development:
+  database: ideas4all_development
+  <<: *base
+
+test:
+  database: ideas4all_test
+  <<: *base
+
+production:
+  database: ideas4all_authorizator
+  <<: *base
