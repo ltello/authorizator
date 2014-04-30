@@ -4,18 +4,12 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-#capistrano
-require 'rvm/capistrano'
-
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/ubuntu/authorizator"
+set :deploy_to, "/home/authorizator"
 
-role :app, "majinboo.ideas4all.com"
-role :web, "majinboo.ideas4all.com"
-role :db,  "majinboo.ideas4all.com"
-
-set :rvm_ruby_string, 'ruby-2.1.0@authorizator'
-set :rvm_bin_path, "/usr/local/rvm/bin"
+role :app, "dende.ideas4all.com"
+role :web, "dende.ideas4all.com"
+role :db,  "dende.ideas4all.com"
 
 # Extended Server Syntax
 # ======================
@@ -23,18 +17,7 @@ set :rvm_bin_path, "/usr/local/rvm/bin"
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'majinboo.ideas4all.com', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
-
-
-namespace :rvm do
-  desc "Create correct RVM file"
-  task :create_rvmrc do
-    run "cd /home/ubuntu/authorizator && rvm use 2.1.0@authorizator --rvmrc --create"
-  end
-end
-
-after "rvm:create_rvmrc", "rvm:create_rvmrc"
-
+server 'dende.ideas4all.com', user: 'authorizator', roles: %w{web app}, my_property: :my_value
 
 # Custom SSH Options
 # ==================
