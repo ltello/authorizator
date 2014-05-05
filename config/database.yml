@@ -1,23 +1,36 @@
 base: &base
   adapter: mysql2
+  enconding: utf8
+
+production_base: &production_base
   username: admin
   password: 108k24gi4pfiesnr
   host: cip-109-107-37-112.gb1.brightbox.com
-  encoding: utf8
+
+no_production_base: &no_production_base
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
 
 #this is for replication. In development/integration we can just set the same config as in the "development" section
 master_database:
   database: ideas4all_authorizator
   <<: *base
+  <<: *production_base
 
 development:
-  database: ideas4all_development
+  database: authorizator_development
   <<: *base
+  <<: *no_production_base
 
 test:
-  database: ideas4all_test
+  database: authorizator_test
   <<: *base
+  <<: *no_production_base
 
 production:
   database: ideas4all_authorizator
   <<: *base
+  <<: *production_base
+
