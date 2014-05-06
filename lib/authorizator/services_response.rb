@@ -8,7 +8,7 @@ module Authorizator
     end
 
     def body
-      services_list = applications.map {|app| {name: app.name, site: app.redirect_uri}}
+      services_list = applications.map {|app| {name: app.name, site: app.redirect_uri.chomp('/')}}
       {services: services_list}
     end
 
