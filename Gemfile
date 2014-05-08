@@ -55,3 +55,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'byebug', group: [:development]
+
+# Pretty Print in console
+gem 'awesome_print'
+
