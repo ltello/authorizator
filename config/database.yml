@@ -3,9 +3,6 @@ base: &base
   enconding: utf8
 
 production_base: &production_base
-  username: admin
-  password: 108k24gi4pfiesnr
-  host: cip-109-107-37-112.gb1.brightbox.com
 
 no_production_base: &no_production_base
   pool: 5
