@@ -34,8 +34,11 @@ gem 'devise', '3.2.3'
 # Oauth provider
 gem 'doorkeeper', '1.0.0'
 
-#capistrano
-gem 'capistrano', '3.1.0'
+# Use Capistrano for deployment
+group :development do
+  gem 'capistrano',       '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
+end
 #gem 'rvm-capistrano', '1.5.0'
 
 group :doc do
@@ -48,9 +51,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
