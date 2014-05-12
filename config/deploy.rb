@@ -3,6 +3,7 @@ lock '3.1.0'
 
 set :application, 'authorizator'
 set :repo_url, 'git@git.ideas4all.com:authorizator.git'
+set :rails_env, 'production'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -34,6 +35,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+
 
 namespace :deploy do
 

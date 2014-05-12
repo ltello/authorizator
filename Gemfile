@@ -36,10 +36,10 @@ gem 'doorkeeper', '1.0.0'
 
 # Use Capistrano for deployment
 group :development do
-  gem 'capistrano',       '~> 3.1'
+  gem 'capistrano',       '3.1.0'
   gem 'capistrano-rails', '~> 1.1'
 end
-#gem 'rvm-capistrano', '1.5.0'
+# gem 'rvm-capistrano', '1.5.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -54,7 +54,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'byebug', group: [:development]
+gem 'byebug', group: [:development, :test]
 
 # Pretty Print in console
 gem 'awesome_print'
