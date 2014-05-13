@@ -52,6 +52,12 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
+# Testing with Rspec.
+group :development, :test do
+  gem 'rspec',       '~> 2.14'
+  gem 'rspec-rails', '~> 2.14'
+end
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'byebug', group: [:development, :test]
