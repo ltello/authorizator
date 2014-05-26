@@ -16,7 +16,9 @@ Authorizator::Application.routes.draw do
   # root 'welcome#index'
   root 'doorkeeper/applications#index'
 
-  resources :users, :except => [:new, :create]
+  # Only show users info. The rest of CRUD operations must be done through
+  # the Devise registrations_controller routes
+  resources :users, :only => [:index, :show]
 
   resources :services, :only => [:index] do
     get 'talking_token', :on => :collection
