@@ -39,4 +39,18 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   # config.order = "random"
+
+  # Stop running remaining tests as soon as a fail occurs.
+  config.fail_fast = true
+
+  config.include Devise::TestHelpers,   type: :controller
+  config.include ControllerHelpers,     type: :controller
+  config.include ControllerHelpers,     type: :request
+  config.extend  ControllerHelpers,     type: :controller
+  config.extend  ControllerHelpers,     type: :request
+  config.include Requests::JsonHelpers, type: :controller
+  config.include Requests::JsonHelpers, type: :request
+  config.include RoutingHelpers,        type: :routing
+  config.extend  RoutingHelpers,        type: :routing
+
 end

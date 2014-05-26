@@ -28,6 +28,6 @@ shared_context "as a user:" do
              Run the rest of tests in this spec folder to get details info about every API endpoint:
                - /services               #=> json list with info about every service in the suite controlled by this Authorizator service.
                - /services/talking_token #=> json with the current valid talking token info for services in the suite to secure requests." do
-    it '' do end
+    it ' ' do end
   end
 end

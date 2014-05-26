@@ -20,6 +20,6 @@ shared_context "as a maintainer:" do
                at the begining of the Controller definition.
 
            See the rest of tests in this spec/ folder for more documentation." do
-    it '' do end
+    it ' ' do end
   end
 end

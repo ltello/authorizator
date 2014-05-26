@@ -34,6 +34,6 @@ shared_context "as an admin:" do
                using the revoked tokens for the short period of time left until expiration.
 
            See the rest of tests in this spec/ folder for more documentation." do
-    it '' do end
+    it ' ' do end
   end
 end
