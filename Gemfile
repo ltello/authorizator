@@ -54,8 +54,9 @@ end
 
 # Testing with Rspec.
 group :development, :test do
-  gem 'rspec',       '~> 2.14'
-  gem 'rspec-rails', '~> 2.14'
+  gem 'rspec',                   '3.0.0.rc1'
+  gem 'rspec-rails',             '3.0.0.rc1'
+  gem 'rspec-activemodel-mocks', '1.0.0.beta1'
 end
 
 # Use debugger
