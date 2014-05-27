@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'views/users_views_spec'
 require 'views/services_views_spec'
 

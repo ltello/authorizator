@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context "as a user:" do
 
   context "As a user you would want to use this service basically as an API consumer:

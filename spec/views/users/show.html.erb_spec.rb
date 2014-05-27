@@ -1,6 +1,3 @@
-require 'spec_helper'
-
-
 shared_context "users show view" do
 
   describe "users/show" do

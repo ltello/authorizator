@@ -1,6 +1,3 @@
-require 'spec_helper'
-
-
 shared_context 'users helper' do
 
   # Specs in this file have access to a helper object that includes

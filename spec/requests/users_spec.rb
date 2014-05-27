@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context "users requests" do
 
   describe "Users Requests:" do

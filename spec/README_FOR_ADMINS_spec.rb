@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context "as an admin:" do
 
   context "As an administrator you would want to:

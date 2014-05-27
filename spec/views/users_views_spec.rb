@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'views/users/index.html.erb_spec'
 require 'views/users/show.html.erb_spec'
 

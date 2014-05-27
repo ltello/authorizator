@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'requests/users_spec'
 
 

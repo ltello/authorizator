@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context 'services controller' do
 
   describe ServicesController do
@@ -11,7 +9,6 @@ shared_context 'services controller' do
 #
       # it "/services: (GET) returns a list with data for every service in the suite secured by the Authorizator." do
       #   # check_routes_for(services_path, verbs: :get)
-      #   byebug
       #   get services_path
       #   expect([401]).to include(response.status)
       #   get services_path, {}, authorization_header_for_access_token

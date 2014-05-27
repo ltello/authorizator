@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'helpers/users_helper_spec'
 require 'helpers/services_helper_spec'
 

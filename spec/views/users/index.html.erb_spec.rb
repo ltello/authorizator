@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context "users index view" do
 
   describe "users/index" do

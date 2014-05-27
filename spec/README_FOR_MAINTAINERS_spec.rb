@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context "as a maintainer:" do
 
   context "As a maintainer of the service you would do the following:

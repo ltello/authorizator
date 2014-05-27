@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_context 'services api' do
 
   describe "Services"  do

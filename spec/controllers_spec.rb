@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'controllers/users_controller_spec'
 require 'controllers/services_controller_spec'
 

@@ -1,6 +1,3 @@
-require 'spec_helper'
-
-
 shared_context "services views" do
 
   describe "Services:" do

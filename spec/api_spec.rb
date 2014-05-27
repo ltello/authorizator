@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'api/services_api_spec'
 
 

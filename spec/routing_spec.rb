@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 require 'routing/users_routes_spec'
 require 'routing/sessions_routes_spec'
 require 'routing/services_routes_spec'

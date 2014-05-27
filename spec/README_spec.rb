@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "The Authorizator service application is a special service inside an ideas4all service suite.
           Every service in a suite must register in this service to be assigned a pair or client id and client secret
           credentials. This will allow a registered service to talk to the Authorizator api (to request mate services info,
