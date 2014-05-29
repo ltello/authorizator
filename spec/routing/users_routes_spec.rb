@@ -1,6 +1,3 @@
-require "spec_helper"
-
-
 shared_context 'users routes' do
 
   describe 'Users routes:' do

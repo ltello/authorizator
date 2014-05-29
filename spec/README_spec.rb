@@ -1,3 +1,14 @@
+require 'README_FOR_USERS_spec'
+require 'README_FOR_MAINTAINERS_spec'
+require 'README_FOR_ADMINS_spec'
+require 'api_spec'
+require 'request_spec'
+require 'routing_spec'
+require 'controllers_spec'
+require 'views_spec'
+require 'helpers_spec'
+
+
 describe "The Authorizator service application is a special service inside an ideas4all service suite.
           Every service in a suite must register in this service to be assigned a pair or client id and client secret
           credentials. This will allow a registered service to talk to the Authorizator api (to request mate services info,
@@ -13,5 +24,12 @@ describe "The Authorizator service application is a special service inside an id
     include_context 'as a user:'
     include_context 'as an admin:'
     include_context 'as a maintainer:'
+    include_context 'api:'
+    include_context 'request:'
+    include_context 'routing:'
+    include_context 'controllers:'
+    include_context 'views:'
+    include_context 'helpers:'
+
   end
 end

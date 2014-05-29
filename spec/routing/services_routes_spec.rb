@@ -1,6 +1,3 @@
-require "spec_helper"
-
-
 shared_context 'services routes' do
 
   describe "Services routes:" do

@@ -1,6 +1,3 @@
-require "spec_helper"
-
-
 shared_context 'sessions routes' do
 
   describe 'Sessions routes:' do
