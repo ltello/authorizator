@@ -6,7 +6,7 @@ Authorizator::Application.routes.draw do
   end
 
   use_doorkeeper do
-    skip_controllers :token_info, :authorized_applications
+    skip_controllers :token_info, :authorized_applications, :authorizations
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
