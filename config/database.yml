@@ -8,7 +8,6 @@ no_production_base: &no_production_base
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 #this is for replication. In development/integration we can just set the same config as in the "development" section
 master_database:
