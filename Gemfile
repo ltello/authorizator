@@ -57,6 +57,7 @@ group :development, :test do
   gem 'rspec',                   '3.0.0.rc1'
   gem 'rspec-rails',             '3.0.0.rc1'
   gem 'rspec-activemodel-mocks', '1.0.0.beta1'
+  gem 'shoulda-matchers',        '2.6.1'
 end
 
 # Use debugger
