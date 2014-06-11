@@ -35,16 +35,24 @@ gem 'devise', '3.2.3'
 gem 'doorkeeper', '1.0.0'
 
 # Use Capistrano for deployment
-group :development do
+# group :development do
   gem 'capistrano',       '3.1.0'
   gem 'capistrano-rails', '~> 1.1'
-end
-# gem 'rvm-capistrano', '1.5.0'
+# end
+
+# gem 'rvm-capistrano', '~> 1.5.0', group: :production
+gem 'capistrano-rvm', '~> 0.1.1', group: :production
+
+gem 'passenger', '4.0.44', group: :production
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+#api documentation
+gem 'apipie-rails', "~> 0.2"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
@@ -58,6 +66,8 @@ group :development, :test do
   gem 'rspec-rails',             '3.0.0.rc1'
   gem 'rspec-activemodel-mocks', '1.0.0.beta1'
   gem 'shoulda-matchers',        '2.6.1'
+  gem 'simplecov',               '~> 0.7.1'
+  gem 'rails_best_practices',    '~> 1.15.4'
 end
 
 # Use debugger

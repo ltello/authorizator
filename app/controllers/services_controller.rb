@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
   doorkeeper_for :all, :scopes => [:myself]
 
-
+  api :GET, '/services/talking_token', 'Get talking token authorization data for services to be able to talk each other.'
   # GET /services/talking_token.json
   # Returns the talking token: the one that every service has to present to be able to talk to any other one.
   def talking_token
@@ -12,6 +12,7 @@ class ServicesController < ApplicationController
     self.status        = response.status
   end
 
+  api :GET, '/services', 'Get data (name, url...) about all the services in the suite secured by this Authorizator service.'
   # GET /services.json
   # Returns the list of services (services suite data) this Authorizator service provides security for.
   def index
