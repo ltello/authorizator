@@ -1,5 +1,11 @@
+require "capistrano/rvm"
+
+
 # config valid only for Capistrano 3.1
 lock '3.1.0'
+
+set :rvm_type, :system
+set :rvm_ruby_version, 'ruby-2.1.0authorizator'
 
 set :application, 'authorizator'
 set :repo_url, 'git@git.ideas4all.com:authorizator.git'
