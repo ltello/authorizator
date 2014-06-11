@@ -1,6 +1,6 @@
 shared_context 'services api' do
 
-  describe "Services"  do
+  describe "Services", :show_in_doc do
     create_sample_services
     create_valid_access_token
     create_valid_talking_token

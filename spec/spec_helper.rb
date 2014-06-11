@@ -135,6 +135,7 @@ RSpec.configure do |config|
   # Stop running remaining tests as soon as a fail occurs.
   config.fail_fast = true
 
+  config.filter_run :show_in_doc => true if ENV['APIPIE_RECORD']
 
   config.include Devise::TestHelpers,   type: :controller
   config.include ControllerHelpers,     type: :controller
