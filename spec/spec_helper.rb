@@ -135,8 +135,13 @@ RSpec.configure do |config|
   # Stop running remaining tests as soon as a fail occurs.
   config.fail_fast = true
 
+  # If you write $> APIPIE_RECORD=examples rspec to run the tests,
+  # only the examples/example_groups with the metadata :show_in_doc will be run and saved in a file and
+  # used as examples that apipie will magically include in the API documentation in /apidoc.
   config.filter_run :show_in_doc => true if ENV['APIPIE_RECORD']
 
+
+  # Include here all the helper modules in the support folder you want to be available for a certain type of tests.
   config.include Devise::TestHelpers,   type: :controller
   config.include ControllerHelpers,     type: :controller
   config.include ControllerHelpers,     type: :request
