@@ -1,4 +1,5 @@
-require File.expand_path('../../version.rb', __FILE__)
+require File.join(Rails.root, 'config', 'version.rb')
+
 
 Apipie.configure do |config|
 
