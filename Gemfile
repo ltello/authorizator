@@ -77,3 +77,4 @@ gem 'byebug', group: [:development, :test]
 # Pretty Print in console
 gem 'awesome_print'
 
+gem 'rails_12factor'
