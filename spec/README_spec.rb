@@ -9,7 +9,7 @@ require 'views_spec'
 require 'helpers_spec'
 
 
-describe Apipie.configuration.app_info.values.first do
+describe Apipie.configuration.app_info[Authorizator::VERSION] do
 
   include_context 'as a user:'
   include_context 'as an admin:'
