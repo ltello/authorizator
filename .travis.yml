@@ -2,4 +2,5 @@ language: ruby
 rvm:
   - 2.1.0
 cache: bundler
+before_script: rake db:create
 script: bundle exec rspec spec
