@@ -88,3 +88,7 @@ capybara-*html
 # sass
 .sass-cache
 .sass-cache/*
+
+# Ignore coverage reports
+/coverage
+
